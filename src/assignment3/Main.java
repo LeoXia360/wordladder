@@ -65,12 +65,10 @@ public class Main {
 	public static ArrayList<String> parse(Scanner keyboard) {
 		ArrayList<String> input = new ArrayList<String>();
 		keyboard = new Scanner(System.in);
-		System.out.println("Enter the start word: ");
 		input.add(keyboard.nextLine());
 		if(input.contains("/quit")){
 			System.exit(0);
 		}
-		System.out.println("Enter the end word: ");
 		input.add(keyboard.nextLine());
 		if(input.contains("/quit")){
 			System.exit(0);
@@ -78,6 +76,7 @@ public class Main {
 		return input;
 
 	}
+	
 	
 	public static ArrayList<String> getWordLadderDFS(String start, String end) throws IOException {
 		// Returned list should be ordered start to end.  Include start and end.
@@ -96,7 +95,6 @@ public class Main {
 	    		   return DFS_list;
 	    	   }
 	       }
-		
 		try{
 			wordLadderRecursionDFS(start, end);
 		}catch(StackOverflowError t){

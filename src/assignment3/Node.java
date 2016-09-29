@@ -1,5 +1,18 @@
-package assignment3;
+/* WORD LADDER Main.java
+ * EE422C Project 3 submission by
+ * Replace <...> with your actual data.
+ * Leo Xia
+ * LX939
+ * 16450
+ * Tim Yoder
+ * TJY263
+ * <Student2 5-digit Unique No.>
+ * Slip days used: <0>
+ * Git URL: https://github.com/LeoXia360/wordladder
+ * Fall 2016
+ */
 
+package assignment3;
 
 import java.util.ArrayList;
 import java.util.Set;

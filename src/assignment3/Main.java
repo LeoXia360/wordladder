@@ -82,12 +82,27 @@ public class Main {
 	public static ArrayList<String> getWordLadderDFS(String start, String end) throws IOException {
 		// Returned list should be ordered start to end.  Include start and end.
 		// Return empty list if no ladder.
-
+		if(start.length() == end.length()){
+	    	   int count = 0;
+	    	   int length = start.length();
+	    	   while(length > 0){
+	    		   if(start.charAt(length-1) == end.charAt(length-1)){
+	    			   count++;
+	    		   }
+	    		   length -= 1;
+	    	   }
+	    	   if (count == start.length() - 1){
+	    		   System.out.println("a " + 0 + "-rung word ladder exists between " + start + " and " + end + ".");
+	    		   return DFS_list;
+	    	   }
+	       }
+		
 		try{
 			wordLadderRecursionDFS(start, end);
 		}catch(StackOverflowError t){
 			wordLadderRecursionDFS(end, start);
 		}
+		
 		if(DFS_list.isEmpty()){
 			System.out.println("no word ladder can be found between " + start + " and " + end + ".");
 			return DFS_list;
